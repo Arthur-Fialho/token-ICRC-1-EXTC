@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "token-EXTC-backend": {
+      "main": "src/token-EXTC-backend/main.mo",
+      "type": "motoko"
+    },
+    "token-EXTC-frontend": {
+      "dependencies": [
+        "token-EXTC-backend"
+      ],
+      "source": [
+        "src/token-EXTC-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "token-EXTC-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,5 +1,11 @@
 {
   "canisters": {
+    "btoken_icrc1_ledger_canister": {
+      "type": "custom",
+      "candid": "https://github.com/dfinity/ic/releases/download/ledger-suite-icrc-2025-05-22/ledger.did",
+      "wasm": "https://github.com/dfinity/ic/releases/download/ledger-suite-icrc-2025-05-22/ic-icrc1-ledger.wasm.gz",
+      "init_arg": "(variant {Init = record { token_symbol = \"EXTC\"; token_name = \"Exercicio Coin\"; minting_account = record { owner = principal \"h3uh5-gbxio-jhmfi-ejdpu-nbd6t-bmju7-nh2yr-tg4t4-wi4r6-5tp6f-aqe\"}; transfer_fee = 10_000; metadata = vec {}; feature_flags = opt record{icrc2 = true}; initial_balances = vec { record { record { owner = principal \"ppcmy-mqgrr-isjmb-tcu23-qd5zz-bd2eg-535i5-egnhi-wrmk3-ltcau-vqe\"; }; 100_000_000_000; }; }; archive_options = record { num_blocks_to_archive = 1000; trigger_threshold = 2000; controller_id = principal \"nisuj-n7skm-quaba-a7brb-iq2dq-wqk4c-duvef-6z573-s4oib-h3bj2-fae\"; cycles_for_archive_creation = opt 10000000000000; }; } })" 
+    },
     "token-EXTC-backend": {
       "main": "src/token-EXTC-backend/main.mo",
       "type": "motoko"
